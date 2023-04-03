@@ -30,8 +30,7 @@ function pageLoad() {
                 content.appendChild(menu);
             } else {
                 content.appendChild(contact);
-            }
-            
+            }   
         })
     })
 }
