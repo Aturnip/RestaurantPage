@@ -10,23 +10,53 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/footer.js":
+/*!***********************!*\
+  !*** ./src/footer.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadFooter\": () => (/* binding */ loadFooter)\n/* harmony export */ });\n\nfunction loadFooter() {\n    const footer = document.createElement(\"footer\");\n\n    const textAuthor = document.createElement(\"p\");\n    textAuthor.textContent = \"Made by Aturnip 2023\"\n\n    footer.appendChild(textAuthor);\n\n    return footer;\n}\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/footer.js?");
+
+/***/ }),
+
+/***/ "./src/header.js":
+/*!***********************!*\
+  !*** ./src/header.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadHeader\": () => (/* binding */ loadHeader)\n/* harmony export */ });\n\nfunction loadHeader() {\n    const header = document.createElement(\"div\");\n    header.classList.add(\"header\");\n    header.textContent = \"A turnips magic shop\"\n\n    return header;\n}\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/header.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pageLoad__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pageLoad */ \"./src/pageLoad.js\");\n\n\n(0,_pageLoad__WEBPACK_IMPORTED_MODULE_0__.pageLoad)();\nconsole.log(\"Hello admin!\");\n\n//# sourceURL=webpack://restaurantpage/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./page */ \"./src/page.js\");\n\n\n(0,_page__WEBPACK_IMPORTED_MODULE_0__.pageLoad)();\n\nconsole.log(\"Hello admin!\");\n\n//# sourceURL=webpack://restaurantpage/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/pageLoad.js":
-/*!*************************!*\
-  !*** ./src/pageLoad.js ***!
-  \*************************/
+/***/ "./src/navbar.js":
+/*!***********************!*\
+  !*** ./src/navbar.js ***!
+  \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"pageLoad\": () => (/* binding */ pageLoad)\n/* harmony export */ });\nfunction pageLoad() {\n    const contentDiv = document.querySelector(\"div#content\");\n\n    let headline = document.createElement(\"h1\");\n    headline.textContent = \"Welocome to my restaurant!\";\n    contentDiv.appendChild(headline);\n\n    let image = document.createElement(\"img\");\n    image.src = \"/home/jakub/repos/RestaurantPage/dist/images/pexels-ash-376464.jpg\";\n    contentDiv.appendChild(image);\n\n    let about = document.createElement(\"p\");\n    about.textContent = \"This restaurant is wonderful and so cozy and nice overall!\";\n    contentDiv.appendChild(about);\n}\n\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/pageLoad.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadNavbar\": () => (/* binding */ loadNavbar)\n/* harmony export */ });\n\nfunction loadNavbar() {\n    const navbar = document.createElement(\"div\");\n    navbar.classList.add(\"navbar\");\n\n    const profileButton = document.createElement(\"button\");\n    profileButton.textContent = \"HOME\";\n    navbar.appendChild(profileButton);\n    \n    const menuButton = document.createElement(\"button\");\n    menuButton.textContent = \"MENU\";\n    navbar.appendChild(menuButton);\n\n    const contactButton = document.createElement(\"button\");\n    contactButton.textContent = \"CONTACT\";\n    navbar.appendChild(contactButton);\n\n\n    return navbar;\n}\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/navbar.js?");
+
+/***/ }),
+
+/***/ "./src/page.js":
+/*!*********************!*\
+  !*** ./src/page.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"pageLoad\": () => (/* binding */ pageLoad)\n/* harmony export */ });\n/* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./footer */ \"./src/footer.js\");\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./header */ \"./src/header.js\");\n/* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./navbar */ \"./src/navbar.js\");\n\n\n\n\n\nfunction pageLoad() {\n    const mainBody = document.querySelector(\".main_body\");\n\n    const contentBody = document.createElement(\"div\");\n    contentBody.classList.add(\"content\")\n\n    mainBody.appendChild((0,_header__WEBPACK_IMPORTED_MODULE_1__.loadHeader)());\n    mainBody.appendChild((0,_navbar__WEBPACK_IMPORTED_MODULE_2__.loadNavbar)());\n    mainBody.appendChild(contentBody);\n    mainBody.appendChild((0,_footer__WEBPACK_IMPORTED_MODULE_0__.loadFooter)());\n}\n\n\n\n\n//# sourceURL=webpack://restaurantpage/./src/page.js?");
 
 /***/ })
 
